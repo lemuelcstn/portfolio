@@ -1,4 +1,3 @@
-/* Base styles and variables */
 :root {
     --primary-color: #0006b5;
     --primary-hover: #5046e5;
@@ -25,7 +24,7 @@ body {
     background-repeat: no-repeat;
     color: var(--text-main);
     line-height: 1.6;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 a {
@@ -55,7 +54,6 @@ ul {
     font-size: 2rem;
     color: var(--text-main);
 }
-
 
 .nav-links ul {
     display: flex;
@@ -308,7 +306,6 @@ ul {
     }
 }
 
-
 .menu-toggle {
     display: none;
 }
@@ -372,8 +369,6 @@ ul {
     .hero-image-container {
         min-height: auto;
     }
-
-
 
     .floating-item {
         padding: 8px 12px;

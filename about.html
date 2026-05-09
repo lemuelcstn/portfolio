@@ -4,40 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lemuel Custan | Web Portfolio</title>
+    <title>Lemuel Custan | Web Portfolio - About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
-    <nav>
-        <a href="index.html" class="logo">LEMUEL CUSTAN</a>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon">
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-text">LDC</span>
+        </a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
         </label>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="tech-stack.html">Tech Stack</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="tech-stack.html">Tech Stack</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="about" id="about">
-        <div class="about text">
-            <h2>About Me</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur illo modi quisquam commodi
-                asperiores sed omnis minima, enim voluptates, cum qui ut, consequuntur inventore itaque minus doloremque
-                molestias! Iusto, itaque.
+    <main class="hero-section">
+        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h1 class="hero-title">About <span class="highlight">Me</span></h1>
+            <p class="hero-description">
+                
             </p>
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur illo modi quisquam commodi
-                asperiores sed omnis minima, enim voluptates, cum qui ut, consequuntur inventore itaque minus doloremque
-                molestias! Iusto, itaque.
+            <p class="hero-description">
+                
             </p>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
