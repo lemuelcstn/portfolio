@@ -1,43 +1,26 @@
 function openModal(element) {
-    const modal = document.getElementById('certModal');
-    const modalContent = document.getElementById('certModalContent');
-    if (modal && modalContent) {
-        if (element) {
-            const img = document.getElementById('modalImage');
-            const title = document.getElementById('modalTitle');
-            const desc = document.getElementById('modalDescription');
-            const link = document.getElementById('modalVerifyLink');
-            
-            if (img) img.src = element.getAttribute('data-img');
-            if (title) title.innerText = element.getAttribute('data-title');
-            if (desc) desc.innerText = element.getAttribute('data-desc');
-            if (link) link.href = element.getAttribute('data-link');
-        }
+  if (!element) return;
 
-        modal.style.display = 'flex';
-        // Trigger reflow for animation
-        void modal.offsetWidth;
-        modal.style.opacity = '1';
-        modalContent.style.transform = 'translateY(0) scale(1)';
-    }
-}
+  const img = element.getAttribute("data-img");
+  const title = element.getAttribute("data-title");
+  const desc = element.getAttribute("data-desc");
+  const link = element.getAttribute("data-link");
 
-function closeModal() {
-    const modal = document.getElementById('certModal');
-    const modalContent = document.getElementById('certModalContent');
-    if (modal && modalContent) {
-        modal.style.opacity = '0';
-        modalContent.style.transform = 'translateY(30px) scale(0.95)';
-        setTimeout(() => {
-            modal.style.display = 'none';
-        }, 300);
+  Swal.fire({
+    title: title,
+    text: desc,
+    imageUrl: img,
+    imageAlt: title + " Badge",
+    showCloseButton: true,
+    confirmButtonText: "Verify Certification",
+    confirmButtonColor: "#0006b5",
+    customClass: {
+      popup: "!w-[90%] !max-w-[600px]",
+      image: "!max-w-[85%] !h-auto !object-contain !mx-auto !my-4",
+    },
+  }).then((result) => {
+    if (result.isConfirmed && link) {
+      window.open(link, "_blank");
     }
-}
-
-// Close when clicking outside the modal content
-window.onclick = function(event) {
-    const modal = document.getElementById('certModal');
-    if (event.target == modal) {
-        closeModal();
-    }
+  });
 }

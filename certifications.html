@@ -1,133 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Certifications | Lemuel Custan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications | Lemuel Custan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "var(--primary-color)",
+            "primary-hover": "var(--primary-hover)",
+            main: "var(--text-main)",
+            muted: "var(--text-muted)",
+            circle: "var(--bg-circle)",
+          },
+          fontFamily: {
+            inter: ["Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
 </head>
 
 <body>
-    <header class="navbar">
-        <a href="index.html" class="logo">
-            <span class="logo-text">LDC</span>
-        </a>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="tech-stack.html">Tech Stack</a></li>
-                <li><a href="certifications.html" class="active">Certifications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-text">LDC</span>
+    </a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="tech-stack.html">Tech Stack</a></li>
+        <li>
+          <a href="certifications.html" class="active">Certifications</a>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="hero-section">
-        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h1 class="hero-title"><span class="highlight">Certifications</span></h1>
-            <div class="certifications-container"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
-                <!-- Microsoft Word -->
-                <div onclick="openModal(this)" data-title="Microsoft Word Certification"
-                    data-desc="Successfully earned the Microsoft Word Certification, demonstrating proficiency in document creation, formatting, and professional word processing."
-                    data-img="Image/mswordcert.jpg"
-                    data-link="https://www.credly.com/badges/797578f0-22d9-4119-b880-ea6142aabe54/public_url"
-                    style="cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 2rem; background: var(--bg-circle); border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0, 123, 255, 0.15)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.05)'">
-                    <img src="Image/msword.png" alt="Microsoft Word Certification Badge"
-                        style="max-width: 180px; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); pointer-events: none;">
-                    <span
-                        style="display: inline-block; padding: 0.8rem 1.8rem; background: #007bff; color: white; border-radius: 30px; font-weight: 600; font-size: 1rem; transition: background 0.3s ease, transform 0.2s ease; pointer-events: none;"
-                        onmouseover="this.style.background='#0056b3'; this.style.transform='scale(1.05)'"
-                        onmouseout="this.style.background='#007bff'; this.style.transform='scale(1)'">View
-                        Details</span>
-                </div>
-                <!-- Microsoft PowerPoint -->
-                <div onclick="openModal(this)" data-title="Microsoft PowerPoint Certification"
-                    data-desc="Successfully earned the Microsoft PowerPoint Certification, demonstrating proficiency in creating dynamic presentations, slide designs, and professional slideshows."
-                    data-img="Image/mspowerpointcert.jpg"
-                    data-link="https://www.credly.com/badges/c20e4355-5381-4f27-8e46-6576989b7d1a/public_url"
-                    style="cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 2rem; background: var(--bg-circle); border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(255, 87, 34, 0.15)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.05)'">
-                    <img src="Image/mspowerpoint.png" alt="Microsoft PowerPoint Certification Badge"
-                        style="max-width: 180px; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); pointer-events: none;">
-                    <span
-                        style="display: inline-block; padding: 0.8rem 1.8rem; background: #ff5722; color: white; border-radius: 30px; font-weight: 600; font-size: 1rem; transition: background 0.3s ease, transform 0.2s ease; pointer-events: none;"
-                        onmouseover="this.style.background='#e64a19'; this.style.transform='scale(1.05)'"
-                        onmouseout="this.style.background='#ff5722'; this.style.transform='scale(1)'">View
-                        Details</span>
-                </div>
-                <!-- Networking Basics -->
-                <div onclick="openModal(this)" data-title="Networking Basics Certification"
-                    data-desc="Successfully earned the Networking Basics Certification, demonstrating fundamental knowledge in networking concepts, protocols, and infrastructure."
-                    data-img="Image/networkingbasicscert.jpg"
-                    data-link="https://www.credly.com/badges/b9f30873-d537-486d-a6ca-573da0a4af67/public_url"
-                    style="cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 2rem; background: var(--bg-circle); border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(0, 188, 212, 0.15)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.05)'">
-                    <img src="Image/networkingbasics.png" alt="Networking Basics Certification Badge"
-                        style="max-width: 180px; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); pointer-events: none;">
-                    <span
-                        style="display: inline-block; padding: 0.8rem 1.8rem; background: #00bcd4; color: white; border-radius: 30px; font-weight: 600; font-size: 1rem; transition: background 0.3s ease, transform 0.2s ease; pointer-events: none;"
-                        onmouseover="this.style.background='#0097a7'; this.style.transform='scale(1.05)'"
-                        onmouseout="this.style.background='#00bcd4'; this.style.transform='scale(1)'">View
-                        Details</span>
-                </div>
-                <!-- Python Essentials 1 -->
-                <div onclick="openModal(this)" data-title="Python Essentials 1 Certification"
-                    data-desc="Successfully earned the Python Essentials 1 Certification, demonstrating fundamental knowledge in Python programming, data structures, and problem-solving."
-                    data-img="Image/pythonessentialscert.jpg"
-                    data-link="https://www.credly.com/badges/197dda22-987b-4cb0-bd98-9c1cc1dae055/public_url"
-                    style="cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 1.5rem; padding: 2rem; background: var(--bg-circle); border-radius: 24px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;"
-                    onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 40px rgba(255, 212, 59, 0.15)'"
-                    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0, 0, 0, 0.05)'">
-                    <img src="Image/pythonessentials1.png" alt="Python Essentials 1 Certification Badge"
-                        style="max-width: 180px; height: auto; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); pointer-events: none;">
-                    <span
-                        style="display: inline-block; padding: 0.8rem 1.8rem; background: #00bcd4; color: white; border-radius: 30px; font-weight: 700; font-size: 1rem; transition: background 0.3s ease, transform 0.2s ease; pointer-events: none;"
-                        onmouseover="this.style.background='#ffc107'; this.style.transform='scale(1.05)'"
-                        onmouseout="this.style.background='#ffd43b'; this.style.transform='scale(1)'">View
-                        Details</span>
-                </div>
-            </div>
+  <main class="hero-section">
+    <div class="hero-content max-w-[800px] mx-auto text-center">
+      <h1 class="hero-title">
+        <span class="highlight">Certifications</span>
+      </h1>
+      <div class="certifications-container grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-8 mt-12">
+        <!-- Microsoft Word -->
+        <div onclick="openModal(this)" data-title="Microsoft Word Certification"
+          data-desc="Successfully earned the Microsoft Word Certification, demonstrating proficiency in document creation, formatting, and professional word processing."
+          data-img="Image/mswordcert.jpg"
+          data-link="https://www.credly.com/badges/797578f0-22d9-4119-b880-ea6142aabe54/public_url"
+          class="group cursor-pointer flex flex-col items-center gap-6 p-8 bg-circle rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,123,255,0.15)]">
+          <img src="Image/msword.png" alt="Microsoft Word Certification Badge"
+            class="max-w-[180px] h-auto drop-shadow-[0_4px_10px_rgba(0,0,0,0.3)] pointer-events-none" />
+          <span
+            class="inline-block py-[0.8rem] px-[1.8rem] bg-[#007bff] text-white rounded-[30px] font-semibold text-base transition-all duration-300 pointer-events-none group-hover:bg-[#0056b3] group-hover:scale-105">View
+            Details</span>
         </div>
-    </main>
-
-    <!-- Modal Popup -->
-    <div id="certModal"
-        style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); backdrop-filter: blur(8px); justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease;">
-        <div style="background: #111; padding: 2.5rem; border-radius: 24px; text-align: center; max-width: 900px; width: 95%; position: relative; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 20px 50px rgba(0,0,0,0.5); transform: translateY(30px) scale(0.95); transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);"
-            id="certModalContent">
-            <span onclick="closeModal()"
-                style="position: absolute; top: 20px; right: 25px; color: #a0a0b0; font-size: 30px; font-weight: bold; cursor: pointer; transition: color 0.2s; z-index: 2;"
-                onmouseover="this.style.color='#ff4757'" onmouseout="this.style.color='#a0a0b0'">&times;</span>
-            <img id="modalImage" src="" alt="Certification Badge"
-                style="max-width: 100%; width: auto; height: auto; max-height: 65vh; object-fit: contain; filter: drop-shadow(0 8px 16px rgba(0,0,0,0.4)); margin-bottom: 1.5rem; border-radius: 8px;">
-            <h2 id="modalTitle"
-                style="color: #fff; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-size: 1.5rem;"></h2>
-            <p id="modalDescription" style="color: #a0a0b0; margin-bottom: 2rem; line-height: 1.6; font-size: 0.95rem;">
-            </p>
-            <a id="modalVerifyLink" href="" target="_blank" rel="noopener noreferrer"
-                style="text-decoration: none; display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #007bff, #0056b3); color: white; border-radius: 30px; font-weight: 600; font-size: 1rem; transition: transform 0.2s ease, box-shadow 0.2s ease;"
-                onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(0, 123, 255, 0.3)'"
-                onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">Verify on Credly</a>
+        <!-- Microsoft PowerPoint -->
+        <div onclick="openModal(this)" data-title="Microsoft PowerPoint Certification"
+          data-desc="Successfully earned the Microsoft PowerPoint Certification, demonstrating proficiency in creating dynamic presentations, slide designs, and professional slideshows."
+          data-img="Image/mspowerpointcert.jpg"
+          data-link="https://www.credly.com/badges/c20e4355-5381-4f27-8e46-6576989b7d1a/public_url"
+          class="group cursor-pointer flex flex-col items-center gap-6 p-8 bg-circle rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,87,34,0.15)]">
+          <img src="Image/mspowerpoint.png" alt="Microsoft PowerPoint Certification Badge"
+            class="max-w-[180px] h-auto drop-shadow-[0_4px_10px_rgba(0,0,0,0.3)] pointer-events-none" />
+          <span
+            class="inline-block py-[0.8rem] px-[1.8rem] bg-[#ff5722] text-white rounded-[30px] font-semibold text-base transition-all duration-300 pointer-events-none group-hover:bg-[#e64a19] group-hover:scale-105">View
+            Details</span>
         </div>
+        <!-- Networking Basics -->
+        <div onclick="openModal(this)" data-title="Networking Basics Certification"
+          data-desc="Successfully earned the Networking Basics Certification, demonstrating fundamental knowledge in networking concepts, protocols, and infrastructure."
+          data-img="Image/networkingbasicscert.jpg"
+          data-link="https://www.credly.com/badges/b9f30873-d537-486d-a6ca-573da0a4af67/public_url"
+          class="group cursor-pointer flex flex-col items-center gap-6 p-8 bg-circle rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,188,212,0.15)]">
+          <img src="Image/networkingbasics.png" alt="Networking Basics Certification Badge"
+            class="max-w-[180px] h-auto drop-shadow-[0_4px_10px_rgba(0,0,0,0.3)] pointer-events-none" />
+          <span
+            class="inline-block py-[0.8rem] px-[1.8rem] bg-[#00bcd4] text-white rounded-[30px] font-semibold text-base transition-all duration-300 pointer-events-none group-hover:bg-[#0097a7] group-hover:scale-105">View
+            Details</span>
+        </div>
+        <!-- Python Essentials 1 -->
+        <div onclick="openModal(this)" data-title="Python Essentials 1 Certification"
+          data-desc="Successfully earned the Python Essentials 1 Certification, demonstrating fundamental knowledge in Python programming, data structures, and problem-solving."
+          data-img="Image/pythonessentialscert.jpg"
+          data-link="https://www.credly.com/badges/197dda22-987b-4cb0-bd98-9c1cc1dae055/public_url"
+          class="group cursor-pointer flex flex-col items-center gap-6 p-8 bg-circle rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.05)] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,188,212,0.15)]">
+          <img src="Image/pythonessentials1.png" alt="Python Essentials 1 Certification Badge"
+            class="max-w-[180px] h-auto drop-shadow-[0_4px_10px_rgba(0,0,0,0.3)] pointer-events-none" />
+          <span
+            class="inline-block py-[0.8rem] px-[1.8rem] bg-[#00bcd4] text-white rounded-[30px] font-semibold text-base transition-all duration-300 pointer-events-none group-hover:bg-[#0097a7] group-hover:scale-105">View
+            Details</span>
+        </div>
+      </div>
     </div>
+  </main>
 
-    <script src="scripts/portfolio.js"></script>
+  <script src="scripts/portfolio.js"></script>
 </body>
 
 </html>

@@ -2,50 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About | Lemuel Custan</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Lemuel Custan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="CSS/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: 'var(--primary-color)',
+            'primary-hover': 'var(--primary-hover)',
+            main: 'var(--text-main)',
+            muted: 'var(--text-muted)',
+            circle: 'var(--bg-circle)',
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
 </head>
 
 <body>
-    <header class="navbar">
-        <a href="index.html" class="logo">
-            <span class="logo-text">LDC</span>
-        </a>
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="tech-stack.html">Tech Stack</a></li>
-                <li><a href="certifications.html">Certifications</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="navbar">
+    <a href="index.html" class="logo">
+      <span class="logo-text">LDC</span>
+    </a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="nav-links">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="tech-stack.html">Tech Stack</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main class="hero-section">
-        <div class="hero-content" style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <h1 class="hero-title"><span class="highlight">About</span></h1>
-            <div class="content-box">
-                <p>
-                    I am Lemuel Custan, an aspiring web developer who enjoys creating responsive and user-friendly websites. I am continuously improving my skills in web development, problem-solving, and logical thinking through hands-on practice and personal projects. I also have a strong interest in astronomy, which reflects my curiosity and passion for learning. Outside of technology, I serve as the President of our church’s District Youth Ministry, where I have developed leadership and communication skills.
-                </p>
-                <p>
-                    My professional aspiration is to become a skilled web developer who creates innovative and impactful digital solutions. I aim to contribute to projects that solve real-world problems and improve the way people interact with technology. I also hope to continuously expand my knowledge and grow into a well-rounded IT professional who can make a meaningful contribution to both the technology industry and the community.
-                </p>
-            </div>
-        </div>
-    </main>
+  <main class="hero-section">
+    <div class="hero-content max-w-[800px] mx-auto text-center">
+      <h1 class="hero-title"><span class="highlight">About Me</span></h1>
+      <div class="content-box">
+        <p>
+          I am Lemuel Custan, an aspiring web developer who enjoys creating responsive and user-friendly websites. I am
+          continuously improving my skills in web development, problem-solving, and logical thinking through hands-on
+          practice and personal projects. I also have a strong interest in astronomy, which reflects my curiosity and
+          passion for learning. Outside of technology, I serve as the President of our church’s District Youth Ministry,
+          where I have developed leadership and communication skills.
+        </p>
+        <p>
+          My professional aspiration is to become a skilled web developer who creates innovative and impactful digital
+          solutions. I aim to contribute to projects that solve real-world problems and improve the way people interact
+          with technology. I also hope to continuously expand my knowledge and grow into a well-rounded IT professional
+          who can make a meaningful contribution to both the technology industry and the community.
+        </p>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
